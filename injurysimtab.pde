@@ -5,14 +5,11 @@ class InjurySimTab extends TabPanel {
   }
 
   void draw() {
-    fill(255, 255, 255, 15);
-    noStroke();
-    rect(80, 20, width - 100, height - 40, 20);
-
+    drawPanels();
     fill(255);
     textSize(16);
     textAlign(CENTER, CENTER);
-    text("Injury Sim Tab", width/2 + 20, height/2);
+    text("Injury Sim Tab — coming soon", width/2 + 75, height/2);
   }
 
   void onClick(int x, int y) {
