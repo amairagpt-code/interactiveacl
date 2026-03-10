@@ -1,4 +1,4 @@
-abstract class TabPanel implements IDrawable, IInteractable {
+abstract class TabPanel implements IDrawable, IInteractable { 
   private String title;
   private boolean isVisible;
 
