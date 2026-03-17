@@ -1,5 +1,4 @@
 class ViewButton extends Button {
-
   AnatomyTab tab;
 
   ViewButton(float x, float y, float w, float h, String label, AnatomyTab tab) {
@@ -24,6 +23,6 @@ class ViewButton extends Button {
   }
 
   void onClick() {
-    tab.setView(label);
+    // no longer used in new flow
   }
 }

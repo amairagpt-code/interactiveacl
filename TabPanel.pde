@@ -1,31 +1,27 @@
-abstract class TabPanel implements IDrawable, IInteractable { 
+abstract class TabPanel extends Screen {
   private String title;
   private boolean isVisible;
 
   TabPanel(String title) {
+    super(title);
     this.title = title;
     this.isVisible = false;
   }
 
-  void show()         { isVisible = true; }
-  void hide()         { isVisible = false; }
-  boolean isVisible() { return isVisible; }
-  String getTitle()   { return title; }
+  void show() {
+    isVisible = true;
+  }
 
-  void drawPanels() {
-    String[] labels = {
-    "Anatomy", "Injury Sim" 
-  };
-    for (int i = 0; i < labels.length; i++) {
-      boolean active = labels[i].equals(title);
-      fill(active ? 255 : 150);
-      noStroke();
-      rect(0, i*40, 150, 40);
-      fill(active ? 0 : 255);
-      textSize(12);
-      textAlign(CENTER, CENTER);
-      text(labels[i], 75, 20 + i * 40);
-    }
+  void hide() {
+    isVisible = false;
+  }
+
+  boolean isVisible() {
+    return isVisible;
+  }
+
+  String getTitle() {
+    return title;
   }
 
   abstract void draw();
