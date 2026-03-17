@@ -23,6 +23,5 @@ class ViewButton extends Button {
   }
 
   void onClick() {
-    // no longer used in new flow
   }
 }

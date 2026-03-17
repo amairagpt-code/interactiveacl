@@ -1,14 +1,13 @@
-AnatomyTab   anatomyTab;
+AnatomyTab anatomyTab;
 InjurySimTab simTab;
-String       screen = "home";
-
 HomeScreen homeScreen;
+String screen = "home";
 
 void setup() {
   size(900, 650);
-  anatomyTab  = new AnatomyTab();
-  simTab      = new InjurySimTab();
-  homeScreen  = new HomeScreen();
+  homeScreen = new HomeScreen();
+  anatomyTab = new AnatomyTab();
+  simTab = new InjurySimTab();
 }
 
 void draw() {
@@ -26,23 +25,23 @@ void draw() {
 }
 
 void mousePressed() {
-  if (screen.equals("home")) {
+  if (screen == ("home")) {
     homeScreen.onClick(mouseX, mouseY);
-  } else if (screen.equals("anatomy")) {
+  } else if (screen == ("anatomy")) {
     anatomyTab.onViewSelectClick(mouseX, mouseY);
-  } else if (screen.equals("front") || screen.equals("back")) {
+  } else if (screen == ("front") || screen == ("back")) {
     anatomyTab.onClick(mouseX, mouseY);
-  } else if (screen.equals("injurysim")) {
+  } else if (screen == ("injurysim")) {
     simTab.onClick(mouseX, mouseY);
   }
 }
 
 void mouseMoved() {
-  if (screen.equals("front") || screen.equals("back")) {
-    anatomyTab.onHover(mouseX, mouseY);
-  } else if (screen.equals("home")) {
+  if (screen == ("home")) {
     homeScreen.onHover(mouseX, mouseY);
-  } else if (screen.equals("anatomy")) {
+  } else if (screen == ("anatomy")) {
     anatomyTab.onViewSelectHover(mouseX, mouseY);
+  } else if (screen == ("front") || screen == ("back")) {
+    anatomyTab.onHover(mouseX, mouseY);
   }
 }

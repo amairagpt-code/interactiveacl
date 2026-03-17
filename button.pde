@@ -4,10 +4,10 @@ abstract class Button implements IButton {
   protected boolean active;
 
   Button(float x, float y, float w, float h, String label) {
-    this.x     = x;
-    this.y     = y;
-    this.w     = w;
-    this.h     = h;
+    this.x = x;
+    this.y = y;
+    this.w = w;
+    this.h = h;
     this.label = label;
     this.active = false;
   }
